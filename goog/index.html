@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Google Closure</title>
+    <script>
+        var CLOSURE_BASE_PATH = './src/';
+    </script>
+    <script src="http://closure-library.googlecode.com/svn/trunk/closure/goog/base.js"></script>
+    <script>
+        goog.addDependency('app.js', ['app'], ['app.foo']);
+        goog.addDependency('foo.js', ['app.foo'], []);
+
+        goog.require('app');
+        // Error
+        //app.start('Google Closure');
+    </script>
+</head>
+<body>
+    <script>
+        app.start('Google Closure');
+    </script>
+</body>
+</html>

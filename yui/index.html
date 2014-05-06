@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>YUI</title>
+    <script src="http://yui.yahooapis.com/3.16.0/build/yui/yui-min.js"></script>
+    <script>
+        YUI.GlobalConfig = {
+            modules: {
+                myapp: '/src/app.js',
+                foo: '/src/foo.js'
+            }
+        };
+    </script>
+</head>
+<body>
+    <script>
+        YUI().use('myapp', function (Y) {
+            var app = Y.app;
+
+            app.start('YUI');
+        });
+    </script>
+</body>
+</html>

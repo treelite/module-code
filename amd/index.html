@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>AMD</title>
+    <script src="http://s1.bdstatic.com/r/www/cache/ecom/esl/1-8-0/esl.js"></script>
+    <script>
+        require.config({
+            baseUrl: './asset'
+        });
+    </script>
+</head>
+<body>
+    <script>
+        require(['app'], function (app) {
+            app.start('amd');
+        });
+    </script>
+</body>
+</html>
